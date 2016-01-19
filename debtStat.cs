@@ -285,5 +285,10 @@ namespace P2
         {
             return currLoan;
         }
+
+        public bool isActive()
+        {
+            return active;
+        }
     }
 }
