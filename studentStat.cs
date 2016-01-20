@@ -5,8 +5,31 @@ namespace P2
 {
     class studentStat
     {
+        const int TEST_NUM = 4;
         private List<debtStat> student;
         private int totalDebt;
+
+        public studentStat(int numStu = TEST_NUM )
+        {
+           // int count = 0;
+            student = new List<debtStat>(TEST_NUM);
+            /*foreach (debtStat element in student)
+            {
+                student[count] = new debtStat();
+                ++count;
+            }*/
+
+        }
+
+        /*public void setID(int id)
+        {
+            int count = 0;
+            foreach (debtStat element in student)
+            {
+                student[count].StudentID = id;
+                ++count;
+            }
+        }*/
 
         public int indexMostBurden()
         {
@@ -58,4 +81,3 @@ namespace P2
 
         }
     }
-}
