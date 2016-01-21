@@ -1,4 +1,8 @@
-﻿using System;
+﻿// AUTHOR: Colin Brinton
+// FILENAME: debtStat.cs
+// DATE: 1/20/2016
+// REVISION HISTORY: 2.0
+using System;
 
 namespace P2
 {
@@ -28,6 +32,7 @@ namespace P2
         readonly int origLoan;
         private int currLoan;
         readonly int origGrant;
+        private int currGrant;
         readonly int matriculation;
         private int anticGrad;
         readonly int origGrad;
@@ -42,7 +47,9 @@ namespace P2
         {
             studentID = id;
             origLoan = loan;
+            currLoan = loan;
             origGrant = grant;
+            currGrant = grant;
             matriculation = matric;
             origGrad = grad;
             active = true;

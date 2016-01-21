@@ -1,24 +1,31 @@
-﻿using System;
+﻿// AUTHOR: Colin Brinton
+// FILENAME: studentStat.cs
+// DATE: 1/20/2016
+// REVISION HISTORY: 1.0
+using System;
 using System.Collections.Generic;
 
 namespace P2
 {
     class studentStat
     {
-        const int TEST_NUM = 4;
+        const int TEST_NUM = 3;
         private List<debtStat> student;
-        private int totalDebt;
 
-        public studentStat(int numStu = TEST_NUM )
+        public studentStat(int test = TEST_NUM)
         {
            // int count = 0;
-            student = new List<debtStat>(TEST_NUM);
-            /*foreach (debtStat element in student)
-            {
-                student[count] = new debtStat();
-                ++count;
-            }*/
+            student = new List<debtStat>(test);
+           
+                
 
+        }
+
+        
+        public void constructStats(int id, int loan, int grant, int matric, int grad)
+        {
+                debtStat addStat = new debtStat(id, loan, grant, matric, grad);
+                student.Add(addStat);     
         }
 
         /*public void setID(int id)
@@ -36,9 +43,9 @@ namespace P2
             int maxBurden = 0;
             int most = new int();
 
+            int count = 0;
             foreach (debtStat element in student)
             {
-                int count = 0;
                 int curBurden = 0;
                 curBurden = student[count].getBurden();
 
